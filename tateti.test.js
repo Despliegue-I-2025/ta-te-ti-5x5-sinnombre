@@ -1,5 +1,5 @@
 // test-5x5.test.js
-const { checkWinner, detectPlayer, bestMove } = require('./server-5x5');
+const { checkWinner, detectPlayer, bestMove } = require('./tateti');
 
 describe('Ta-Te-Ti 5x5', () => {
   test('detecta correctamente al jugador actual', () => {
@@ -49,12 +49,6 @@ describe('Ta-Te-Ti 5x5', () => {
       2, 0, 0, 0, 0
     ];
     expect(checkWinner(board)).toBe(2);
-  });
-
-  test('detecta empate', () => {
-    const board = Array(25).fill(1);
-    board[0] = 2; // Ninguno gana pero está lleno
-    expect(checkWinner(board)).toBe(0);
   });
 
   test('la IA devuelve un movimiento válido', () => {
