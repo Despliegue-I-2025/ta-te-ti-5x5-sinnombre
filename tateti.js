@@ -1,4 +1,4 @@
-// server-5x5.js — Ta-Te-Ti 5x5 con IA fuerte
+// server-5x5.js — Ta-Te-Ti 5x5 
 const express = require('express');
 const app = express();
 const PORT = 3001;
@@ -8,7 +8,7 @@ app.use(express.json());
 // 🔹 Utilidades de Tablero 5x5
 // ===============================
 const SIZE = 5;
-const WIN_LEN = 5;
+const WIN_LEN = 4
 
 function cell(board, r, c) {
   return board[r * SIZE + c];
@@ -194,7 +194,7 @@ app.post('/move', validateBoard, (req, res) => {
 // 🔹 Inicio del servidor
 // ===============================
 app.listen(PORT, () => {
-  console.log(`Servidor Ta-Te-Ti 5x5 con IA fuerte en http://localhost:${PORT}`);
+  console.log(`Servidor Ta-Te-Ti 5x5 en http://localhost:${PORT}`);
 });
 
 module.exports = { checkWinner, detectPlayer, printBoard, bestMove };
