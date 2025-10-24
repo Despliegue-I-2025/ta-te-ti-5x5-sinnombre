@@ -8,6 +8,7 @@ Este proyecto implementa un **Ta-Te-Ti** de **5x5** donde gana quien logra **4 e
 - **Node.js** + **Express**: servidor local
 - **Jest**: testing unitario
 - **IA**: Minimax limitado (profundidad 5) con heurística de líneas
+- **Vercel**: Despligue Gratuito
 
 ---
 
@@ -16,6 +17,12 @@ El algoritmo usa:
 - **Evaluación heurística** que pondera líneas con fichas propias y del oponente.
 - **Profundidad máxima = 5** (puede tardar un poco, pero juega con estrategia real).
 - **Poda alfa-beta** para optimizar ramas no prometedoras.
+
+---
+
+## 📦 URL de Vercel
+
+👉 https://ta-te-ti-5x5-sinnombre.vercel.app/move?board=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]&player=1
 
 ---
 
