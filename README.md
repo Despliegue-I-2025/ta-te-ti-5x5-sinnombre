@@ -23,7 +23,7 @@ El algoritmo usa:
 ## 📦 URL de Vercel
 
 👉 https://ta-te-ti-5x5-sinnombre.vercel.app/move?board=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]&player=1
-El Bot piensa demasiado por eso puede tardar en pensar su movimiento.
+- El Bot piensa demasiado por eso puede tardar en pensar su movimiento.
 
 ---
 
