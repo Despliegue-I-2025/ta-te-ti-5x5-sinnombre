@@ -1,7 +1,7 @@
-// test-5x5.test.js
+// test-5x5-4enraya.test.js
 const { checkWinner, detectPlayer, bestMove } = require('./tateti');
 
-describe('Ta-Te-Ti 5x5', () => {
+describe('Ta-Te-Ti 5x5 - 4 en raya', () => {
   test('detecta correctamente al jugador actual', () => {
     expect(detectPlayer([0,0,0,0,0, 0,0,0,0,0, 0,0,0,0,0, 0,0,0,0,0, 0,0,0,0,0])).toBe(1);
     expect(detectPlayer([1,2,1,0,0, 0,0,0,0,0, 0,0,0,0,0, 0,0,0,0,0, 0,0,0,0,0])).toBe(2);
@@ -9,7 +9,7 @@ describe('Ta-Te-Ti 5x5', () => {
 
   test('detecta ganador en una fila', () => {
     const board = [
-      1, 1, 1, 1, 1,
+      1, 1, 1, 1, 0,  // 4 en raya
       0, 0, 0, 0, 0,
       0, 0, 0, 0, 0,
       0, 0, 0, 0, 0,
@@ -24,7 +24,7 @@ describe('Ta-Te-Ti 5x5', () => {
       2, 0, 0, 0, 0,
       2, 0, 0, 0, 0,
       2, 0, 0, 0, 0,
-      2, 0, 0, 0, 0
+      0, 0, 0, 0, 0   // solo 4 en columna necesarias
     ];
     expect(checkWinner(board)).toBe(2);
   });
@@ -35,18 +35,18 @@ describe('Ta-Te-Ti 5x5', () => {
       0, 1, 0, 0, 0,
       0, 0, 1, 0, 0,
       0, 0, 0, 1, 0,
-      0, 0, 0, 0, 1
+      0, 0, 0, 0, 0  // 4 en diagonal
     ];
     expect(checkWinner(board)).toBe(1);
   });
 
   test('detecta ganador en diagonal ↙', () => {
     const board = [
-      0, 0, 0, 0, 2,
       0, 0, 0, 2, 0,
       0, 0, 2, 0, 0,
       0, 2, 0, 0, 0,
-      2, 0, 0, 0, 0
+      2, 0, 0, 0, 0,
+      0, 0, 0, 0, 0  // 4 en diagonal
     ];
     expect(checkWinner(board)).toBe(2);
   });
@@ -65,3 +65,4 @@ describe('Ta-Te-Ti 5x5', () => {
     expect(board[move]).toBe(0);
   });
 });
+
